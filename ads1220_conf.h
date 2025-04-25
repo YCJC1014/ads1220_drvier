@@ -3,29 +3,29 @@
 /*
 @filename   ads1220_conf.h
 
-@brief		����SPI��ADS1220��������ͷ�ļ�����Ҫ֧��HAL��
+@brief		基于SPI的ADS1220驱动配置头文件，需要支持HAL库
 
 @time		2024/08/25
 
-@author		�轡
+@author		丁鹏龙
 
 @version    1.0
 
-@attention  ʹ�ñ�����ʱ������ʵ�ֱ��ļ����г��ĺ꺯��
+@attention  使用本驱动时，必须实现本文件所列出的宏函数
 
 */
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-//����ϵͳͷ�ļ�
+//引入系统头文件
 #include <stdint.h>
 #include "delay.h"
 
-//��ӡ������Ϣ��־����
+//打印调试信息日志开关
 #define ADS1220_PRINT_DEBUE_INFO 1
 
-//�����ṩ��ʱ1ms�ĺ���,�Թ������ź�ʱ��
+//必须提供延时1ms的函数,以供满足信号时序
 #define ADS1220_DELAY_1MS do{delay_ms(1);}while(0)
 
 
